@@ -21,7 +21,6 @@ import org.wso2.carbon.analytics.permissions.bean.Permission;
 import org.wso2.carbon.streaming.integrator.core.api.ApiResponseMessageWithCode;
 import org.wso2.carbon.streaming.integrator.core.api.NotFoundException;
 import org.wso2.carbon.streaming.integrator.core.api.RunTimeApiService;
-import org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorDataHolder;
 import org.wso2.msf4j.Request;
 
 import javax.ws.rs.core.Response;

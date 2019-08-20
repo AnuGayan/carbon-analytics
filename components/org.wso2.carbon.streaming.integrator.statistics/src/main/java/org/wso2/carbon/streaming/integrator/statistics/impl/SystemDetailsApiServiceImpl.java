@@ -22,8 +22,8 @@ import com.google.gson.Gson;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.analytics.permissions.bean.Permission;
-import org.wso2.carbon.streaming.integrator.statistics.api.NotFoundException;
-import org.wso2.carbon.streaming.integrator.statistics.api.SystemDetailsApiService;
+import org.wso2.carbon.streaming.integration.statistics.api.NotFoundException;
+import org.wso2.carbon.streaming.integration.statistics.api.SystemDetailsApiService;
 import org.wso2.carbon.streaming.integrator.statistics.internal.WorkerGeneralDetails;
 import org.wso2.msf4j.Request;
 

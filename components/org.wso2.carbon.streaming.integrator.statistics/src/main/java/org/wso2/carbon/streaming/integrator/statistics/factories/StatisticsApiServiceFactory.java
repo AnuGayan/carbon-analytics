@@ -18,7 +18,7 @@
 package org.wso2.carbon.streaming.integrator.statistics.factories;
 
 
-import org.wso2.carbon.streaming.integrator.statistics.api.StatisticsApiService;
+import org.wso2.carbon.streaming.integration.statistics.api.StatisticsApiService;
 import org.wso2.carbon.streaming.integrator.statistics.impl.StatisticsApiServiceImpl;
 
 /**

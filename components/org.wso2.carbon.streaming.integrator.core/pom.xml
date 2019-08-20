@@ -75,6 +75,11 @@
             <artifactId>org.wso2.carbon.datasource.core</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.siddhi.distribution</groupId>
+            <artifactId>io.siddhi.distribution.common</artifactId>
+        </dependency>
+
         <!--streamDefinitionService-->
         <dependency>
             <groupId>com.google.collections</groupId>

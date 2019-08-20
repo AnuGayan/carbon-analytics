@@ -83,16 +83,6 @@
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>org.wso2.transport.http</groupId>
-            <artifactId>org.wso2.transport.http.netty.feature</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.messaging</groupId>
-            <artifactId>org.wso2.carbon.messaging.feature</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
             <groupId>org.wso2.carbon.datasources</groupId>
             <artifactId>org.wso2.carbon.datasource.core.feature</artifactId>
             <type>zip</type>
@@ -117,6 +107,11 @@
         <dependency>
             <groupId>org.wso2.carbon.metrics</groupId>
             <artifactId>org.wso2.carbon.metrics.jdbc.core.feature</artifactId>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.metrics</groupId>
+            <artifactId>org.wso2.carbon.metrics.das.core.feature</artifactId>
             <type>zip</type>
         </dependency>
 
@@ -217,6 +212,11 @@
             <artifactId>org.wso2.carbon.cluster.coordinator.rdbms.feature</artifactId>
             <type>zip</type>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.carbon.si.coordination.listener.feature</artifactId>
+            <type>zip</type>
+        </dependency>
 
         <!-- Permission module -->
         <dependency>
@@ -239,11 +239,6 @@
             <artifactId>org.wso2.carbon.si.metrics.core.feature</artifactId>
             <type>zip</type>
         </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.analytics</groupId>
-            <artifactId>org.wso2.carbon.streaming.integrator.statistics.feature</artifactId>
-            <type>zip</type>
-        </dependency>
         <!--Data Provider-->
         <dependency>
             <groupId>org.wso2.carbon.analytics</groupId>
@@ -257,13 +252,11 @@
             <artifactId>org.wso2.carbon.health.check.core.feature</artifactId>
             <type>zip</type>
         </dependency>
-
         <dependency>
-            <groupId>org.wso2.carbon.metrics</groupId>
-            <artifactId>org.wso2.carbon.metrics.das.core.feature</artifactId>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.siddhi.parser.service.feature</artifactId>
             <type>zip</type>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -434,11 +427,6 @@
                                     <id>org.wso2.carbon.metrics.jdbc.core.feature</id>
                                     <version>${carbon.metrics.version}</version>
                                 </feature>
-
-                                <feature>
-                                    <id>org.wso2.carbon.streaming.integrator.statistics.feature</id>
-                                    <version>${carbon.analytics.version}</version>
-                                </feature>
                                 <feature>
                                     <id>org.wso2.carbon.si.metrics.core.feature</id>
                                     <version>${carbon.analytics.version}</version>
@@ -551,6 +539,10 @@
                                     <id>org.wso2.carbon.metrics.das.core.feature</id>
                                     <version>${carbon.metrics.version}</version>
                                 </feature>
+                                <feature>
+                                    <id>org.wso2.siddhi.parser.service.feature</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
                             </features>
                         </configuration>
                     </execution>
@@ -662,10 +654,6 @@
                                     <version>${carbon.metrics.version}</version>
                                 </feature>
                                 <feature>
-                                    <id>org.wso2.carbon.streaming.integrator.statistics.feature</id>
-                                    <version>${carbon.analytics.version}</version>
-                                </feature>
-                                <feature>
                                     <id>org.wso2.carbon.si.metrics.core.feature</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
@@ -744,6 +732,10 @@
                                 <feature>
                                     <id>org.wso2.carbon.metrics.das.core.feature.group</id>
                                     <version>${carbon.metrics.version}</version>
+                                </feature>
+                                <feature>
+                                    <id>org.wso2.siddhi.parser.service.feature</id>
+                                    <version>${carbon.analytics.version}</version>
                                 </feature>
                             </features>
                         </configuration>

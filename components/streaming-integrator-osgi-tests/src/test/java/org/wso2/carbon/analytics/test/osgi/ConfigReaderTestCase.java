@@ -50,6 +50,7 @@ public class ConfigReaderTestCase {
     private static final String DEFAULT_USER_NAME = "admin";
     private static final String DEFAULT_PASSWORD = "admin";
     private static final String CARBON_YAML_FILENAME = "deployment.yaml";
+    private static final long DEFAULT_PORT = 9090;
 
     @Inject
     private CarbonServerInfo carbonServerInfo;
@@ -82,7 +83,7 @@ public class ConfigReaderTestCase {
     @Test
     public void testConfigReaderFunctionalityTest1() throws Exception {
 
-        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", 9090));
+        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", DEFAULT_PORT));
         String path = "/siddhi-apps";
         String contentType = "text/plain";
         String method = "POST";
@@ -99,7 +100,7 @@ public class ConfigReaderTestCase {
     @Test
     public void testConfigReaderFunctionalityTest2() throws Exception {
 
-        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", 9090));
+        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", DEFAULT_PORT));
         String path = "/siddhi-apps";
         String contentType = "text/plain";
         String method = "POST";
@@ -116,7 +117,7 @@ public class ConfigReaderTestCase {
     @Test
     public void testConfigReaderFunctionalityTest3() throws Exception {
 
-        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", 9090));
+        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", DEFAULT_PORT));
         String path = "/siddhi-apps";
         String contentType = "text/plain";
         String method = "POST";
@@ -133,7 +134,7 @@ public class ConfigReaderTestCase {
     @Test
     public void testConfigReaderFunctionalityTest4() throws Exception {
 
-        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", 9090));
+        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", DEFAULT_PORT));
         String path = "/siddhi-apps";
         String contentType = "text/plain";
         String method = "POST";
@@ -150,7 +151,7 @@ public class ConfigReaderTestCase {
     @Test
     public void testConfigReaderFunctionalityTest5() throws Exception {
 
-        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", 9090));
+        URI baseURI = URI.create(String.format("http://%s:%d", "localhost", DEFAULT_PORT));
         String path = "/siddhi-apps";
         String contentType = "text/plain";
         String method = "POST";

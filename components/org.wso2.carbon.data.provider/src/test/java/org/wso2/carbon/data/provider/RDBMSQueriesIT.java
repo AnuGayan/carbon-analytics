@@ -43,12 +43,12 @@ import org.wso2.carbon.datasource.core.beans.DataSourceDefinition;
 import org.wso2.carbon.datasource.core.exception.DataSourceException;
 import org.wso2.msf4j.MicroservicesRunner;
 
-import javax.net.ssl.SSLException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.net.ssl.SSLException;
 
 public class RDBMSQueriesIT {
     private static final Log log = LogFactory.getLog(RDBMSQueriesIT.class);
@@ -57,17 +57,17 @@ public class RDBMSQueriesIT {
     private final String port = "9090";
     private String dataproviderUrl = "ws://" + host + ":" + port + "/data-provider";
 
+    @AfterClass
+    public static void shutdown() {
+        log.info("== RDBMS Queries tests completed ==");
+    }
+
     @BeforeClass
     public void startTest() {
         log.info("== RDBMS Queries tests started ==");
         MicroservicesRunner microservicesRunner = new MicroservicesRunner();
         microservicesRunner.deployWebSocketEndpoint(new DataProviderEndPoint());
         microservicesRunner.start();
-    }
-
-    @AfterClass
-    public static void shutdown() {
-        log.info("== RDBMS Queries tests completed ==");
     }
 
     @BeforeMethod
@@ -116,6 +116,11 @@ public class RDBMSQueriesIT {
                 @Override
                 public <T> T getConfigurationObject(String s, Class<T> aClass) throws ConfigurationException {
                     return (T) rdbmsDataProviderConfBean;
+                }
+
+                @Override
+                public <T> ArrayList<T> getConfigurationObjectList(String s, Class<T> aClass) throws ConfigurationException {
+                    return null;
                 }
             };
             DataProviderValueHolder.getDataProviderHelper().setDataSourceService(dataSourceService);
