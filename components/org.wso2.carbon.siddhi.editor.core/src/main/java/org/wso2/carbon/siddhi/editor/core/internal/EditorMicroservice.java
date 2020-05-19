@@ -1441,8 +1441,12 @@ public class EditorMicroservice implements Microservice {
                     }
                 }
                 if (null != (firstLine = bufferedReader.readLine())) {
-                    String splitRegex = csvConfig.getDelimiter() + Constants.REGEX_TO_KEEP_QUOTES;
-                    attributeValueList = firstLine.split(splitRegex, -1);
+                    if (firstLine.contains("'") || firstLine.contains("\"")) {
+                        String splitRegex = csvConfig.getDelimiter() + Constants.REGEX_TO_KEEP_QUOTES;
+                        attributeValueList = firstLine.split(splitRegex, -1);
+                    } else {
+                        attributeValueList = firstLine.split(csvConfig.getDelimiter());
+                    }
                     if (csvConfig.isHeaderExist() && attributeNameList.length != attributeValueList.length) {
                         String message = "Header attribute length : " + attributeNameList.length +
                                 " and corresponding value length : " + attributeValueList.length + " does not match ";
