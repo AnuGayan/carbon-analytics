@@ -1381,12 +1381,12 @@ public class EditorMicroservice implements Microservice {
         SiddhiAppRuntime siddhiAppRuntime = EditorDataHolder.getSiddhiManager().getSiddhiAppRuntime(appName);
         JSONObject errorResponse = new JSONObject();
         if (siddhiAppRuntime == null) {
-            errorResponse.put("error", "There is no Siddhi App exist with provided name : " + appName);
+            errorResponse.put("error", "A Siddhi Application with the given name does not exist : " + appName);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(errorResponse.toString()).build();
         } else {
             StreamDefinition streamDefinition = siddhiAppRuntime.getStreamDefinitionMap().get(streamName);
             if (streamDefinition == null) {
-                errorResponse.put("error", "There is no Stream called " + streamName + " in " +
+                errorResponse.put("error", "A Stream named " + streamName + " does not exists in " +
                         appName + " Siddhi App.");
                 return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(errorResponse.toString()).build();
             } else {

@@ -549,7 +549,7 @@ public class SiddhiAppsApiServiceImpl extends SiddhiAppsApiService {
         }
 
         String jsonString = new Gson().toJson(new ApiResponseMessage(ApiResponseMessage.NOT_FOUND,
-                "There is no Siddhi App exist with provided name : " + appName));
+                "A Siddhi Application with the given name does not exist : " + appName));
         return Response.status(Response.Status.NOT_FOUND).entity(jsonString).build();
     }
 
