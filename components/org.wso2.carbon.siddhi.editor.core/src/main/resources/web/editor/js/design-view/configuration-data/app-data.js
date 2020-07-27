@@ -38,6 +38,7 @@ define(['require', 'elementUtils', 'lodash'],
                 SEQUENCE: [],
                 JOIN: []
             };
+            this.queryID_count = 1;
             // finalElementCount --> Number of elements that exist on the canvas at the time of saving the model
             this.finalElementCount = 0;
 

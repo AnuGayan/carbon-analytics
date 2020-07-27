@@ -39,6 +39,7 @@ define(['require', 'log', 'jquery', 'backbone', 'lodash', 'designViewUtils', 'dr
             TYPE_CALL_RESPONSE: "call-response",
             TYPE_HTTP_RESPONSE: "http-response"
         };
+        let queryID = 1;
 
         /**
          * @class DesignGrid
@@ -231,25 +232,29 @@ define(['require', 'log', 'jquery', 'backbone', 'lodash', 'designViewUtils', 'dr
                         // If the dropped Element is a Projection Query then->
                         else if ($(droppedElement).hasClass('projection-query-drag')) {
                             self.handleWindowFilterProjectionQuery(constants.PROJECTION, mouseTop, mouseLeft, false,
-                                "Query");
+                                "Query"+queryID);
+                            queryID++;
                         }
 
                         // If the dropped Element is a Filter query then->
                         else if ($(droppedElement).hasClass('filter-query-drag')) {
                             self.handleWindowFilterProjectionQuery(constants.FILTER, mouseTop, mouseLeft, false,
-                                "Query");
+                                "Query"+queryID);
+                            queryID++;
                         }
 
                         // If the dropped Element is a Window Query then->
                         else if ($(droppedElement).hasClass('window-query-drag')) {
                             self.handleWindowFilterProjectionQuery(constants.WINDOW_QUERY, mouseTop, mouseLeft, false,
-                                "Query");
+                                "Query"+queryID);
+                            queryID++;
                         }
 
                         // If the dropped Element is a Function Query then->
                         else if ($(droppedElement).hasClass('function-query-drag')) {
                             self.handleWindowFilterProjectionQuery(constants.FUNCTION_QUERY, mouseTop, mouseLeft, false,
-                                "Query");
+                                "Query"+queryID);
+                            queryID++;
                         }
 
                         // If the dropped Element is a Join Query then->
