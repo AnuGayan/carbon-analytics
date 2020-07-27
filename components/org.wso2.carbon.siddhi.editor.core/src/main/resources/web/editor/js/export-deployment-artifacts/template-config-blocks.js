@@ -4,7 +4,7 @@
 
  define(function() {
      var TemplateConfigBlocks = function () {
-        this.sampleDatasourceConfig =  'dataSources: \n' +
+        this.sampleDatasourceConfig =  'wso2.dataSources: \n' +
            '  - name: SIDDHI_TEST_DB \n' +
            '    description: The datasource used for test database \n' +
            '    jndiConfig: \n' +
